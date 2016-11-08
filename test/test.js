@@ -90,6 +90,9 @@ const cases = [
 }, {
 	values: ['1.0.0.0', '<', '1.0.0.1'],
 	result: true
+}, {// GC like
+	values: ['52', '<', '53.0.2785.116'],
+	result: true
 }, {
 	values: ['1.0.0.0.0', '>', '1.0.0.0.1'],
 	result: false
