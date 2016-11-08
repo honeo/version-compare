@@ -3,7 +3,7 @@
 * [@honeo/version-compare](https://www.npmjs.com/package/@honeo/version-compare)
 
 ## なにこれ
-バージョン比較するやつ。
+バージョン文字列を比較するやつ。
 
 ## 使い方
 ```sh
