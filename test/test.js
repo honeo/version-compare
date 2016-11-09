@@ -112,3 +112,31 @@ cases.forEach( ({values, result})=>{
 		throw new Error(`failed: ${values}`);
 	}
 });
+
+// validation
+let validationCount = 0;
+try{
+	versionCompare(1, '===', '1.0.0');
+}catch(e){
+	validationCount++;
+}
+try{
+	versionCompare('1.0.0', '===', 1);
+}catch(e){
+	validationCount++;
+}
+try{
+	versionCompare(2.0, '===', 2.0);
+}catch(e){
+	validationCount++;
+}
+try{
+	versionCompare('1.0.0', '<>!=', '1.0.0');
+}catch(e){
+	validationCount++;
+}
+if( validationCount===4 ){
+	console.log(`success: validation`);
+}else{
+	throw new Error(`failed: validation`);
+}

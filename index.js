@@ -11,10 +11,10 @@ import {is, not} from '@honeo/type-check';
 
 function versionCompare(ver1, op, ver2){
 	// validation
-	if( not.str(ver1, op, ver2) ){
+	if( !is.str(ver1, op, ver2) ){
 		throw new TypeError(`Invalid argument`);
 	}
-	if( not.version(ver1, ver2) || not.comparisonoperator(op) ){
+	if( !is.version(ver1, ver2) || not.comparisonoperator(op) ){
 		throw new Error(`Invalid argument`);
 	}
 
